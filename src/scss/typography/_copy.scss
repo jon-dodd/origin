@@ -1,0 +1,22 @@
+//==========================================================================
+//   COPY
+//==========================================================================
+
+	//
+	// Body copy styling goes in here. Remember to comment all relevant information.
+	//
+
+	// Styles paragraphs
+	p,
+	.p {
+		@include text-spacing;
+	}
+
+	.paragraph--lede {
+		font-size: $size-larger;
+		line-height: $size-h3; 
+	}
+
+	.paragraph--small {
+		font-size: $size-smaller;
+	}

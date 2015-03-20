@@ -1,0 +1,21 @@
+//==========================================================================
+//   MIXINS
+//==========================================================================
+
+	//
+	// Include in this file all Sass mixins you wish to include and reference elsewhere. Remember to comment before each mixin the synax for using it.
+	// 
+
+	//  @include prefix(border-radius, 4px); for adding vendor prefixes.
+	@mixin prefix($property, $value...){
+	    -webkit-#{$property}: $value;
+	    -moz-#{$property}: $value;
+	    -ms-#{$property}: $value;
+	    -o-#{$property}: $value;
+	    #{$property}: $value;
+	}
+
+	//  @include text-spacing; for a global rule for spacing compondents in body text, such as paragrpahs, lists and blockquotes.
+	@mixin text-spacing {
+		margin: $spacing/2 0;
+	}

@@ -1,0 +1,46 @@
+//==========================================================================
+//   INPUTS
+//==========================================================================
+
+//
+// All link styles to go in here. Remember to comment all relevant information.
+//
+
+// Setting default link styles
+a {
+	color: $colour-link; 
+	text-decoration: underline; 
+	
+	&:hover {
+		color: $colour-secondary; 
+	}
+	
+	&:active {
+		text-decoration: none; 
+	}
+	
+	&:visited {
+		color: lighten($colour-link, 10%); 
+	}
+	
+	&:focus {
+		background: $colour-link;
+		color: $colour-white; 
+	}
+}
+
+
+// Override link states when required.
+.link--block {
+	display: block !important; 
+}
+
+.link--inline {
+	display: inline !important;
+}
+
+.link--inline-block {
+	display: inline-block !important;
+}
+
+/* Note: Button styles are included as a seperate sss file located in /objects/_buttons.scss.

@@ -1,0 +1,71 @@
+//==========================================================================
+//   ANIMATIONS
+//==========================================================================
+
+	//
+	// Add any css animation objects in here. Remember to comment all relevant information.
+	//
+
+	// Appear in animation
+	@-webkit-keyframes fadeDropIn {  
+	    0% {opacity: 0; -webkit-transform: scale(.8); } 
+	    100% { opacity: 1; -webkit-transform: scale(1); } 
+	}
+	@-moz-keyframes fadeDropIn {  
+	    0% {opacity: 0; -moz-transform: scale(.8); } 
+	    100% { opacity: 1; -moz-transform: scale(1); } 
+	}
+	@keyframes fadeDropIn {  
+	    0% {opacity: 0; transform: scale(.8); } 
+	    100% { opacity: 1; transform: scale(1); } 
+	}
+
+	.fade-drop-in {
+		opacity: 0; 
+		@include prefix(animation-name, fadeDropIn);
+	    @include prefix(animation-duration, $animation-time*2);
+	    @include prefix( animation-fill-mode, forwards);
+	    @include prefix(animation-timing-function, ease-in-ou);
+	    @include prefix(animation-delay, $animation-time); 
+	}
+
+	// Animated transitions.
+	.animate--all {
+		@include prefix(transition, all $animation-time $easing); 
+	}
+
+	.animate--opacity {
+		@include prefix(transition, opacity $animation-time $easing); 
+	}
+
+	.animate--width {
+		@include prefix(transition, width $animation-time $easing); 
+	}
+
+	.animate--height {
+		@include prefix(transition, height $animation-time $easing); 
+	}
+
+	.animate--background {
+		@include prefix(transition, background $animation-time $easing); 
+	}
+
+	.animate--colour {
+		@include prefix(transition, color $animation-time $easing); 
+	}
+
+	.animate--left {
+		@include prefix(transition, left $animation-time $easing); 
+	}
+
+	.animate--right {
+		@include prefix(transition, right $animation-time $easing); 
+	}
+
+	.animate--top {
+		@include prefix(transition, top $animation-time $easing); 
+	}
+
+	.animate--bottom {
+		@include prefix(transition, bottom $animation-time $easing); 
+	}

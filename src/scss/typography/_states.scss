@@ -1,0 +1,69 @@
+//==========================================================================
+//   STATES
+//==========================================================================
+
+    //
+    // The following are over rides to be used to over ride the state in question, and replace with tthe new rule. 
+    //
+    
+    // Force alignments
+    .align--centre {
+        text-align: center !important;
+    }
+
+    .align--left {
+        text-align: left !important; 
+    }
+
+    .align--right {
+        text-align: right !important; 
+    }
+
+    // Force weights
+    .weight--light {
+        font-weight: $weight-light !important;
+    }
+
+    .weight--normal {
+        font-weight: $weight-normal !important;
+    }
+
+    .weight--bold {
+        font-weight: $weight-bold !important;
+    }
+
+    .weight--black {
+        font-weight: $weight-black !important;
+    }
+
+
+    // Force styles
+    .style--italic {
+        font-style: italic !important;
+    }
+
+    .style--underline {
+        text-decoration: underline !important;
+    }
+
+    .style--linethrough {
+    	text-decoration: line-through !important; 
+    }
+
+
+    // Force case
+    .case--ucase {
+        text-transform: uppercase !important;
+    }
+
+    .case--lcase {
+        text-transform: lowercase !important;
+    }
+
+    .case--scase {
+        text-transform: none !important;
+    }
+
+    .case--caps {
+        text-transform: capitalize !important;
+    }
