@@ -1,0 +1,76 @@
+//==========================================================================
+//   INPUTS
+//==========================================================================
+
+	label,
+	.label {
+		display: block;
+		width: 100%; 	
+		margin-bottom: $spacing/2; 
+		line-height: $line-height-base; 
+		cursor: pointer; 
+		@include prefix(box-sizing, border-box); 
+		
+		+ label {
+			margin: 0; 
+			padding: $spacing/2 0; 
+		}
+	}
+
+	input[type="text"],
+	input[type="email"],
+	input[type="password"],
+	input[type="tel"],
+	input[type="number"],
+	input[type="url"],
+	textarea {
+		padding: $spacing; 
+		border: 1px solid $colour-grey; 
+		width: 100%; 
+		@include prefix(box-sizing, border-box); 
+		
+		+ button,
+		+ .button,
+		+ input[type="button"] {
+			position: absolute;
+			bottom: 0;
+			right: 0; 
+			border: 0px; 
+			padding: $spacing+2px $spacing*2; 
+		}
+		
+		&:focus {
+			border: 1px solid $colour-alert !important; 
+			background: lighten($colour-alert,15%); 
+			outline: none; 
+			@include prefix(transition, all $animation-time $easing); 
+		}
+	}
+
+	input[type="file"] {
+		padding: $spacing 0; 
+		@include prefix(box-sizing, border-box); 
+	}
+
+	input[type="checkbox"],
+	input[type="radio"] {
+		margin: 0 $spacing/3; 
+	}
+
+	textarea {
+		height: 200px; 
+	}
+
+	select {
+		width: 100%; 
+		margin: $spacing 0; 
+	}
+
+	input[type="button"],
+	input[type="submit"] {
+		border: 0px; 
+	}
+
+	input[type="submit"] {
+		@extend .button--primary; 
+	}

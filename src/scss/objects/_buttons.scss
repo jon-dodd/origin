@@ -1,0 +1,88 @@
+//==========================================================================
+//   BUTTONS
+//==========================================================================
+
+	//
+	// Button styles go in here. Remember to comment all relevant information.
+	//
+
+	// Base button style
+	.button,
+	button,
+	input[type="button"],
+	input[type="submit"] {
+		padding: $spacing $spacing*2; 
+		display: inline-block; 
+		text-decoration: none; 
+		background: $colour-secondary;
+		color: $colour-white; 
+		@include prefix(transition, background $animation-time $easing); 
+		
+		// Heirarchy
+		&.button--primary {
+			background: $colour-primary;
+			color: $colour-black; 
+			
+			&:hover,
+			&:focus {
+				background: darken($colour-primary,10%);
+			}
+		}
+		
+		&.button--secondary {
+			background: $colour-secondary;
+			
+			&:hover,
+			&:focus {
+				background: darken($colour-secondary,10%);
+			}
+		}
+		
+		&.button--tertiary {
+			background: $colour-tertiary;
+			
+			&:hover,
+			&:focus {
+				background: darken($colour-tertiary,10%);
+			}
+		}
+		
+		
+		// Additional mods
+		&.button--muted {
+			background: $colour-grey; 
+			color: $colour-black; 
+			
+			&:hover,
+			&:focus {
+				background: darken($colour-grey,10%);
+			}
+		}
+		
+		&.button--disabled {
+			background: $colour-grey; 
+			cursor: default; 
+			
+			&:hover,
+			&:focus {
+				background: $colour-grey; 
+			}
+		}
+		
+		
+		// Sizing
+		&.button--larger {
+			padding: $spacing*2 $spacing;
+			font-size: $size-larger; 
+		}
+		
+		&.button--smaller {
+			padding: $spacing/2 $spacing/1.5; 
+			font-size: $size-smaller; 
+		}
+		
+		// Changing the state
+		&.button--block {
+			display: block; 
+		}
+	}

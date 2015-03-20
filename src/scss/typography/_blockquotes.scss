@@ -1,0 +1,21 @@
+//==========================================================================
+//   BLOCKQUOTES
+//==========================================================================
+
+	//
+	// This is where we'll style blockquotes. Remember to comment all relevant information.
+	//
+
+	blockquote {
+	  background: $colour-grey;
+	  @include text-spacing;
+	  padding: $spacing;
+	  
+	  p {
+		  font-size: $size-larger;
+	  }
+	}
+
+		cite {
+			font-style: italic; 
+		}

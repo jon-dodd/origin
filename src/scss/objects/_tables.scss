@@ -1,0 +1,58 @@
+//==========================================================================
+//   TABLES
+//==========================================================================
+
+	table {
+	    margin: 0 0 $spacing 0;
+	    width: 100%;
+	}
+
+	    caption {
+	        margin-bottom: $spacing/2;
+	        line-height: $line-height-base; 
+	        text-align: left; 
+	    }
+	    th,
+	    td {
+	        padding: $spacing $spacing $spacing 0;
+	        border-bottom: 1px solid $colour-grey;
+	        text-align: left;
+	        vertical-align: top;
+	        
+	        &:last-child {
+		        padding: $spacing 0; 
+	        }
+	    }
+	    th {
+	        font-weight: bold;
+	    }
+	    thead {
+	        tr:last-child {
+	            th {
+	                border-bottom: 2px solid $colour-grey;
+	            }
+	        }
+	    }
+	    [colspan] {
+	        text-align: center;
+	    }
+	    [colspan="1"] {
+	        text-align: left;
+	    }
+	    [rowspan] {
+	        vertical-align: middle;
+	    }
+	    [rowspan="1"] {
+	        vertical-align: top;
+	    }
+
+
+	// Striped
+	.table--striped {
+	    tbody tr:nth-of-type(odd) {
+	        th,
+	        td {
+	            background: $colour-grey;
+	        }
+	    }
+	}

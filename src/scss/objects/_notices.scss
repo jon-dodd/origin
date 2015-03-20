@@ -1,0 +1,17 @@
+//==========================================================================
+//   NOTICES
+//==========================================================================
+
+	.notice {
+		padding: $spacing;
+		background: $colour-alert; 
+		font-size: $size-larger; 
+	}
+
+	.notice--error {
+		background: $colour-failure; 
+	}
+
+	.notice--success {
+		background: $colour-success; 
+	}

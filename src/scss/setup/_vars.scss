@@ -1,0 +1,47 @@
+//==========================================================================
+//   VARIABLES
+//==========================================================================
+
+	//
+	// Define all your global variables here. Remember to comment all relevant information e.g. "Only to be used for tranactional messages".
+	// 
+
+	// Brand colours
+	$colour-primary: ;
+	$colour-secondary: ;
+	$colour-tertiary: ;
+
+	// Base colours
+	$colour-black: #000000;
+	$colour-white: #FFFFFF;
+	$colour-grey: #CCCCCC;
+		
+	// Interaction colours
+	$colour-link: $colour-primary;
+	$colour-failure: red;
+	$colour-alert: orange;
+	$colour-success: green;
+
+	// Layout
+	$page-width: 1200px;
+	$gutter-width: 20px;
+	$spacing: $gutter-width; 
+
+	// Breakpoints
+	$palm-start: 400px; 
+	$lap-start:  720px;
+	$desk-start: 1000px;
+
+	// Timing
+	$animation-time: 0.2s;
+	$easing: ease-in-out;
+
+	// Positioning
+	$zindex-super: 9999;
+	$zindex-higher: 20;
+	$zindex-high: 10;
+	$zindex-mid: 5;
+	$zindex-low: 2;
+
+
+	//Note: Typography variables are set in /typography/_base.scss
