@@ -5,18 +5,44 @@
 	//
 	// Body copy styling goes in here. Remember to comment all relevant information.
 	//
+	
+	// Highlight colour styling
+	
+	::selection {
+		background: $colour-black;
+		color: $colour-white; 
+	}
+	::-moz-selection {
+		background: $colour-black;
+		color: $colour-white; 
+	}
 
 	// Styles paragraphs
 	p,
 	.p {
 		@include text-spacing;
+		margin: 0 0 $spacing 0; 
 	}
 
 	.paragraph--lede {
 		font-size: $size-larger;
-		line-height: $size-h3; 
+		margin-bottom: $spacing*2; 
+		text-align: center;  
+		
 	}
 
 	.paragraph--small {
 		font-size: $size-smaller;
+	}
+	
+	address {
+		font-style: normal; 
+		line-height: $line-height-base; 
+	}
+	
+	@media all and (min-width: $lap-start) {
+		.text--2col {
+			@include prefix(column-count, 2); 
+			@include prefix(column-gap, $spacing); 
+		}
 	}

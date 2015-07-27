@@ -19,10 +19,6 @@ a {
 		text-decoration: none; 
 	}
 	
-	&:visited {
-		color: lighten($colour-link, 10%); 
-	}
-	
 	&:focus {
 		background: $colour-link;
 		color: $colour-white; 

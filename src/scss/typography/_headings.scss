@@ -19,44 +19,63 @@
 	.h5,
 	h6,
 	.h6 {
-		font-weight: $weight-normal; 
+		font-weight: $weight-bold; 
 		margin: 0; 
-		line-height: $line-height-tighter; 
 	}
 
 	// Styles headers
 	h1,
+	.h1,
+	h2,
+	.h2,
+	h3,
+	.h3 {
+		line-height: $line-height-tighter; 
+		margin-top: $spacing*2;
+	}
+	
+	h2,
+	.h2,
+	h3,
+	.h3 {		
+		&:first-of-type {
+			margin-top: 0; 
+		}
+	}
+	
+	h1,
 	.h1 {
 		font-size: $size-h1; 
-		margin: 0 0 $spacing 0; 
+		margin-bottom: $spacing*2; 
+		
 	}
 
 	h2,
 	.h2 {
 		font-size: $size-h2; 
-		margin: 0 0 $spacing 0; 
+		margin-bottom: $spacing*1.5; 
 	}
 
 	h3,
 	.h3 {
 		font-size: $size-h3; 
-		margin: 0 0 $spacing 0; 
+		margin-bottom: $spacing; 
 	}
 
 	h4,
 	.h4 {
 		font-size: $size-h4; 
-		margin: 0 0 $spacing/2 0; 
+		margin-bottom: $spacing/2;  
 	}
 
 	h5,
 	.h5 {
 		font-size: $size-h5; 
-		margin: 0 0 $spacing/2 0; 
+		margin-bottom: $spacing/2;  
 	}
 
 	h6,
 	.h6 {
 		font-size: $size-h6; 
-		margin: 0 0 $spacing/2 0; 
+		margin-bottom: $spacing/2;  
 	}
