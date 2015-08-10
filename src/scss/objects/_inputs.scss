@@ -41,7 +41,7 @@
 			@include prefix(transition, all $animation-time $easing); 
 		}
 		
-		@media all and (min-width: $largepalm-start) {
+		@media all and (min-width: $palm-start) {
 			.form__question--large-input & {
 				width: 75% !important; 
 			}
