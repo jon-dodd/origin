@@ -1,3 +1,16 @@
 //==========================================================================
 //   PANELS
 //==========================================================================
+
+.wrapper {
+	padding: 0; 
+}
+
+	.container {
+		max-width: $page-width;
+		width: 100%;
+		padding: 0 $spacing;
+		margin: 0 auto; 
+		@include prefix(box-sizing, border-box); 
+		position: relative; 
+	}

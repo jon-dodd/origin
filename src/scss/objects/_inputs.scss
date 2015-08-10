@@ -3,9 +3,10 @@
 //==========================================================================
 
 	label,
-	.label {
+	.form__label {
 		display: block;
 		width: 100%; 	
+		line-height: 1; 
 		margin-bottom: $spacing/2; 
 		line-height: $line-height-base; 
 		cursor: pointer; 
@@ -16,6 +17,11 @@
 			padding: $spacing/2 0; 
 		}
 	}
+	
+		.form__label--full {
+			width: 100% !important; 
+			text-align: left !important; 
+		}
 
 	input[type="text"],
 	input[type="email"],
@@ -24,26 +30,21 @@
 	input[type="number"],
 	input[type="url"],
 	textarea {
-		padding: $spacing; 
+		padding: $spacing/2; 
 		border: 1px solid $colour-grey; 
 		width: 100%; 
 		@include prefix(box-sizing, border-box); 
 		
-		+ button,
-		+ .button,
-		+ input[type="button"] {
-			position: absolute;
-			bottom: 0;
-			right: 0; 
-			border: 0px; 
-			padding: $spacing+2px $spacing*2; 
+		&:focus {
+			outline: none; 
+			background: $colour-white; 
+			@include prefix(transition, all $animation-time $easing); 
 		}
 		
-		&:focus {
-			border: 1px solid $colour-alert !important; 
-			background: lighten($colour-alert,15%); 
-			outline: none; 
-			@include prefix(transition, all $animation-time $easing); 
+		@media all and (min-width: $largepalm-start) {
+			.form__question--large-input & {
+				width: 75% !important; 
+			}
 		}
 	}
 
@@ -54,7 +55,7 @@
 
 	input[type="checkbox"],
 	input[type="radio"] {
-		margin: 0 $spacing/3; 
+		margin: 0 $spacing/3 0 0; 
 	}
 
 	textarea {
@@ -63,14 +64,30 @@
 
 	select {
 		width: 100%; 
-		margin: $spacing 0; 
+		padding: $spacing; 
+		border-radius: none !important; 
+		border: none; 
+		padding: $spacing/2;
+		line-height: 1;
+		-webkit-appearance: menulist-button;
 	}
 
 	input[type="button"],
 	input[type="submit"] {
 		border: 0px; 
 	}
+	
+	
+// Hides number spinners
+	
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+	
+// Mods 
 
-	input[type="submit"] {
-		@extend .button--primary; 
-	}
+.form__input--short-number {
+	max-width: 100px; 
+}

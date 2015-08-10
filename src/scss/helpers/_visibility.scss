@@ -2,3 +2,36 @@
 //   VISIBILITY
 //==========================================================================
 
+.hidden {
+	display: none; 
+}
+
+.visuallyhidden {
+	visibility: none;
+	position: absolute;
+	top: -1000000px;
+	left: -1000000px;
+	width: 0px;
+	height: 0px;
+	display: block; 
+}
+
+.not-palm {
+	display: none; 
+	
+	@media all and (min-width: $lap-start) {
+		display: block;
+		
+		span & {
+			display: inline; 
+		} 
+	}
+}
+
+.not-lap {
+	display: none; 
+	
+	@media all and (min-width: $desk-start) {
+		display: block; 
+	}
+}
