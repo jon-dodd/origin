@@ -41,7 +41,7 @@
 	
 	@media all and (min-width: $lap-start) {
 		.text--2col {
-			@include prefix(column-count, 2); 
-			@include prefix(column-gap, $spacing); 
+			column-count: 2; 
+			column-gap: $spacing; 
 		}
 	}

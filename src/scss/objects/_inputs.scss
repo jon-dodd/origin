@@ -10,7 +10,6 @@
 		margin-bottom: $spacing/2; 
 		line-height: $line-height-base; 
 		cursor: pointer; 
-		@include prefix(box-sizing, border-box); 
 		
 		+ label {
 			margin: 0; 
@@ -34,12 +33,11 @@
 		padding: $spacing/2; 
 		border: 1px solid $colour-grey; 
 		width: 100%; 
-		@include prefix(box-sizing, border-box); 
 		
 		&:focus {
 			outline: none; 
 			background: $colour-white; 
-			@include prefix(transition, all $animation-time $easing); 
+			transition: all $animation-time $easing; 
 		}
 		
 		@media all and (min-width: $palm-start) {
@@ -51,7 +49,6 @@
 
 	input[type="file"] {
 		padding: $spacing 0; 
-		@include prefix(box-sizing, border-box); 
 	}
 
 	input[type="checkbox"],
