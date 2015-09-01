@@ -13,7 +13,6 @@
 		overflow: auto; 
 		margin: 0 0 $spacing 0; 
 		display: block; 
-		@include prefix(box-sizing, border-box); 
 	}
 	
 		.page__blockquote-quote {

@@ -16,7 +16,7 @@
 		text-decoration: none; 
 		background: $colour-primary;
 		color: $colour-white; 
-		@include prefix(transition, background $animation-time $easing); 
+		transition: background $animation-time $easing; 
 		
 		&:hover,
 		&:focus {
