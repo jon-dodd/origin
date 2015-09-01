@@ -45,6 +45,11 @@
 	$zindex-high: 10;
 	$zindex-mid: 5;
 	$zindex-low: 2;
+	
+	// Misc
+	$border-radius: 4px; 
+	$border-weight: 2px; 
+	$box-shadow: 0 0 15px rgba(0,0,0,0.3);
 
 
 	//Note: Typography variables are set in /typography/_base.scss
