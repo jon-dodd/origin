@@ -55,6 +55,19 @@
 		padding-right: $spacing !important; 
 	}
 
+	.border--top {
+		border-top: $border-weight solid $colour-grey !important; 
+	}
+	.border--bottom {
+		border-bottom: $border-weight solid $colour-grey !important; 
+	}
+	.border--left {
+		border-left: $border-weight solid $colour-grey !important; 
+	}
+	.border--right {
+		border-right: $border-weight solid $colour-grey !important; 
+	}
+
 	.float--left {
 		float: left !important;
 	}

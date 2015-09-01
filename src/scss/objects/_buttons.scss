@@ -11,24 +11,21 @@
 	button,
 	input[type="button"],
 	input[type="submit"] {
-		padding: $spacing $spacing*2; 
+		padding: $spacing; 
 		display: inline-block; 
 		text-decoration: none; 
-		background: $colour-secondary;
+		background: $colour-primary;
 		color: $colour-white; 
 		@include prefix(transition, background $animation-time $easing); 
 		
-		// Heirarchy
-		&.button--primary {
-			background: $colour-primary;
-			color: $colour-black; 
-			
-			&:hover,
-			&:focus {
-				background: darken($colour-primary,10%);
-			}
+		&:hover,
+		&:focus {
+			background: darken($colour-primary,10%);
+			color: $colour-white; 
 		}
 		
+		// Heirarchy
+	
 		&.button--secondary {
 			background: $colour-secondary;
 			
@@ -38,12 +35,12 @@
 			}
 		}
 		
-		&.button--tertiary {
-			background: $colour-tertiary;
+		&.button--special {
+			background: $colour-special;
 			
 			&:hover,
 			&:focus {
-				background: darken($colour-tertiary,10%);
+				background: darken($colour-special,10%);
 			}
 		}
 		
@@ -51,16 +48,7 @@
 		// Additional mods
 		&.button--muted {
 			background: $colour-grey; 
-			color: $colour-black; 
-			
-			&:hover,
-			&:focus {
-				background: darken($colour-grey,10%);
-			}
-		}
-		
-		&.button--disabled {
-			background: $colour-grey; 
+			color: lighten($colour-grey, 20%); 
 			cursor: default; 
 			
 			&:hover,
@@ -72,16 +60,20 @@
 		
 		// Sizing
 		&.button--larger {
-			padding: $spacing*2 $spacing;
+			padding: $spacing*2;
 			font-size: $size-larger; 
 		}
 		
-		&.button--smaller {
-			padding: $spacing/2 $spacing/1.5; 
+		&.button--pill {
+			padding: $spacing/2; 
 			font-size: $size-smaller; 
 		}
 		
 		// Changing the state
+		&.button--active {
+			background: darken($colour-primary,10%);
+		}
+		
 		&.button--block {
 			display: block; 
 		}

@@ -29,6 +29,7 @@
 	input[type="tel"],
 	input[type="number"],
 	input[type="url"],
+	input[type="search"],
 	textarea {
 		padding: $spacing/2; 
 		border: 1px solid $colour-grey; 
@@ -41,7 +42,7 @@
 			@include prefix(transition, all $animation-time $easing); 
 		}
 		
-		@media all and (min-width: $largepalm-start) {
+		@media all and (min-width: $palm-start) {
 			.form__question--large-input & {
 				width: 75% !important; 
 			}
@@ -64,12 +65,6 @@
 
 	select {
 		width: 100%; 
-		padding: $spacing; 
-		border-radius: none !important; 
-		border: none; 
-		padding: $spacing/2;
-		line-height: 1;
-		-webkit-appearance: menulist-button;
 	}
 
 	input[type="button"],
