@@ -19,7 +19,7 @@
 	.h5,
 	h6,
 	.h6 {
-		font-weight: $weight-normal; 
+		font-weight: $weight-light; 
 		margin: 0; 
 		line-height: $line-height-tighter; 
 	}
@@ -27,36 +27,76 @@
 	// Styles headers
 	h1,
 	.h1 {
-		font-size: $size-h1; 
-		margin: 0 0 $spacing 0; 
+		font-size: $size-h1/1.7; 
+		margin: 0 0 $spacing*1.5 0; 
+		padding-bottom: $spacing/2; 
+		
+		@media all and (min-width: $palm-start) {
+			font-size: $size-h1/1.2; 
+		}
+		
+		@media all and (min-width: $lap-start) {
+			font-size: $size-h1; 
+		}
 	}
 
 	h2,
 	.h2 {
-		font-size: $size-h2; 
-		margin: 0 0 $spacing 0; 
+		font-size: $size-h2/1.7; 
+		margin: 0 0 $spacing*1.5 0; 
+		
+		@media all and (min-width: $palm-start) {
+			font-size: $size-h2/1.2; 
+		}
+		
+		@media all and (min-width: $lap-start) {
+			font-size: $size-h2; 
+		}
 	}
 
 	h3,
 	.h3 {
-		font-size: $size-h3; 
-		margin: 0 0 $spacing 0; 
+		font-size: $size-h3/1.3; 
+		margin: 0 0 $spacing*1.5 0; 
+		
+		@media all and (min-width: $palm-start) {
+			font-size: $size-h3/1.1; 
+		}
+		
+		@media all and (min-width: $lap-start) {
+			font-size: $size-h3; 
+		}
 	}
 
 	h4,
 	.h4 {
-		font-size: $size-h4; 
-		margin: 0 0 $spacing/2 0; 
+		font-size: $size-h5; 
+		margin: 0 0 $spacing 0; 
+		font-weight: $weight-normal; 
+		
+		@media all and (min-width: $palm-start) {
+			font-size: $size-h4;
+		}
 	}
 
 	h5,
 	.h5 {
 		font-size: $size-h5; 
-		margin: 0 0 $spacing/2 0; 
+		margin: 0 0 $spacing 0; 
+		font-weight: $weight-normal; 
 	}
 
 	h6,
 	.h6 {
 		font-size: $size-h6; 
 		margin: 0 0 $spacing/2 0; 
+	}
+	
+	.heading--spaced {
+		margin-top: $spacing*2; 
+		margin-bottom: $spacing*2; 
+	}
+	
+	.heading--block {
+		display: block; 
 	}

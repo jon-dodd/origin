@@ -32,9 +32,13 @@
 //==========================================================================
 //   Importing all the elements
 //==========================================================================
-
+	
 	@import "setup/setup";
 	@import "typography/typography";
+	// 	@import "magento/styles.scss";
+	@import "development/development.scss";
+	
+	@import "grid/bootstrap";
 	@import "helpers/helpers";
 	@import "objects/objects";
 	@import "components/components"; 

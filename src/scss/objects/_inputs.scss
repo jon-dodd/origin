@@ -3,19 +3,24 @@
 //==========================================================================
 
 	label,
-	.label {
+	.form__label {
 		display: block;
 		width: 100%; 	
+		line-height: 1; 
 		margin-bottom: $spacing/2; 
 		line-height: $line-height-base; 
 		cursor: pointer; 
-		@include prefix(box-sizing, border-box); 
 		
 		+ label {
 			margin: 0; 
 			padding: $spacing/2 0; 
 		}
 	}
+	
+		.form__label--full {
+			width: 100% !important; 
+			text-align: left !important; 
+		}
 
 	input[type="text"],
 	input[type="email"],
@@ -23,38 +28,32 @@
 	input[type="tel"],
 	input[type="number"],
 	input[type="url"],
+	input[type="search"],
 	textarea {
-		padding: $spacing; 
+		padding: $spacing/2; 
 		border: 1px solid $colour-grey; 
 		width: 100%; 
-		@include prefix(box-sizing, border-box); 
-		
-		+ button,
-		+ .button,
-		+ input[type="button"] {
-			position: absolute;
-			bottom: 0;
-			right: 0; 
-			border: 0px; 
-			padding: $spacing+2px $spacing*2; 
-		}
 		
 		&:focus {
-			border: 1px solid $colour-alert !important; 
-			background: lighten($colour-alert,15%); 
 			outline: none; 
-			@include prefix(transition, all $animation-time $easing); 
+			background: $colour-white; 
+			transition: all $animation-time $easing; 
+		}
+		
+		@media all and (min-width: $palm-start) {
+			.form__question--large-input & {
+				width: 75% !important; 
+			}
 		}
 	}
 
 	input[type="file"] {
 		padding: $spacing 0; 
-		@include prefix(box-sizing, border-box); 
 	}
 
 	input[type="checkbox"],
 	input[type="radio"] {
-		margin: 0 $spacing/3; 
+		margin: 0 $spacing/3 0 0; 
 	}
 
 	textarea {
@@ -63,14 +62,24 @@
 
 	select {
 		width: 100%; 
-		margin: $spacing 0; 
 	}
 
 	input[type="button"],
 	input[type="submit"] {
 		border: 0px; 
 	}
+	
+	
+// Hides number spinners
+	
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0; 
+}
+	
+// Mods 
 
-	input[type="submit"] {
-		@extend .button--primary; 
-	}
+.form__input--short-number {
+	max-width: 100px; 
+}

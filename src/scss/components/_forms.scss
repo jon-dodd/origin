@@ -13,7 +13,8 @@
 			padding: 0; 
 		}
 		
-		li {
+		li,
+		.form__question {
 			margin: 0; 
 			padding: 0; 
 			margin-bottom: $spacing; 
@@ -100,7 +101,8 @@
 @media all and (min-width: 600px) {
 	.form--inline {	
 		
-		li {
+		li,
+		.form__question {
 			overflow: auto; 
 		}
 		
@@ -126,6 +128,7 @@
 		input[type="tel"],
 		input[type="number"],
 		input[type="url"],
+		input[type="search"],
 		textarea,
 		select {
 			width: 65%;

@@ -2,6 +2,10 @@
 //   POSITIONS
 //==========================================================================
 
+	.flush {
+		margin: 0 !important;
+		padding: 0 !important; 
+	}
 	.flush--top {
 	    margin-top: 0 !important;
 	    padding-top: 0 !important;
@@ -16,7 +20,59 @@
 	}
 	.flush--left {
 	    margin-left: 0 !important;
-	    margin-left: 0 !important;
+	    padding-left: 0 !important;
+	}
+	
+	.margin {
+		margin: $spacing !important; 
+	}
+	.margin--top {
+		margin-top: $spacing !important; 
+	}
+	.margin--bottom {
+		margin-bottom: $spacing !important; 
+	}
+	.margin--left {
+		margin-left: $spacing !important; 
+	}
+	.margin--right {
+		margin-right: $spacing !important; 
+	}
+	
+	.padding {
+		padding: $spacing !important; 
+	}
+	.padding--top {
+		padding-top: $spacing !important; 
+	}
+	.padding--bottom {
+		padding-bottom: $spacing !important; 
+	}
+	.padding--left {
+		padding-left: $spacing !important; 
+	}
+	.padding--right {
+		padding-right: $spacing !important; 
+	}
+
+	.border--top {
+		border-top: $border-weight solid $colour-grey !important; 
+	}
+	.border--bottom {
+		border-bottom: $border-weight solid $colour-grey !important; 
+	}
+	.border--left {
+		border-left: $border-weight solid $colour-grey !important; 
+	}
+	.border--right {
+		border-right: $border-weight solid $colour-grey !important; 
+	}
+
+	.float--left {
+		float: left !important;
+	}
+	.float--right {
+		float: right !important; 
 	}
 
 	//======================================================================

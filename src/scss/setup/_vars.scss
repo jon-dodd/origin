@@ -7,30 +7,69 @@
 	// 
 
 	// Brand colours
-	$colour-primary: #000;
-	$colour-secondary: #ccc;
-	$colour-tertiary: #333;
+	$colour-brand: #d16b54; 
+
+	// Heirarchy colours
+	$colour-primary: $colour-brand;
+	$colour-secondary: #433447;
+	$colour-special: #63aa92;
 
 	// Base colours
-	$colour-black: #000000;
+	$colour-black: #272727;
 	$colour-white: #FFFFFF;
-	$colour-grey: #CCCCCC;
+	$colour-grey: #b8b8b8;
 		
 	// Interaction colours
 	$colour-link: $colour-primary;
-	$colour-failure: red;
-	$colour-alert: orange;
-	$colour-success: green;
+	$colour-failure: #ae3d3f;
+	$colour-alert: #e8c95d;
+	$colour-success: #52954e;
 
 	// Layout
 	$page-width: 1200px;
-	$gutter-width: 20px;
-	$spacing: $gutter-width; 
+	$grid-gutter-width: 30px !default;
+	$spacing: $grid-gutter-width; 
 
 	// Breakpoints
-	$palm-start: 400px; 
-	$lap-start:  720px;
-	$desk-start: 1000px;
+
+	// Extra small screen / phone
+	//** Deprecated `$screen-xs` as of v3.0.1
+	$screen-xs:                  480px !default;
+	//** Deprecated `$screen-xs-min` as of v3.2.0
+	$screen-xs-min:              $screen-xs !default;
+	//** Deprecated `$screen-phone` as of v3.0.1
+	$screen-phone:               $screen-xs-min !default;
+
+	// Small screen / tablet
+	//** Deprecated `$screen-sm` as of v3.0.1
+	$screen-sm:                  768px !default;
+	$screen-sm-min:              $screen-sm !default;
+	//** Deprecated `$screen-tablet` as of v3.0.1
+	$screen-tablet:              $screen-sm-min !default;
+
+	// Medium screen / desktop
+	//** Deprecated `$screen-md` as of v3.0.1
+	$screen-md:                  992px !default;
+	$screen-md-min:              $screen-md !default;
+	//** Deprecated `$screen-desktop` as of v3.0.1
+	$screen-desktop:             $screen-md-min !default;
+
+	// Large screen / wide desktop
+	//** Deprecated `$screen-lg` as of v3.0.1
+	$screen-lg:                  1200px !default;
+	$screen-lg-min:              $screen-lg !default;
+	//** Deprecated `$screen-lg-desktop` as of v3.0.1
+	$screen-lg-desktop:          $screen-lg-min !default;
+
+	// So media queries don't overlap when required, provide a maximum
+	$screen-xs-max:              ($screen-sm-min - 1) !default;
+	$screen-sm-max:              ($screen-md-min - 1) !default;
+	$screen-md-max:              ($screen-lg-min - 1) !default;
+	
+	$palm-start: $screen-xs; 
+	$lap-start:  $screen-sm;
+	$desk-start: $screen-md;
+	$large-start: $screen-lg;
 
 	// Timing
 	$animation-time: 0.2s;
@@ -42,6 +81,11 @@
 	$zindex-high: 10;
 	$zindex-mid: 5;
 	$zindex-low: 2;
+	
+	// Misc
+	$border-radius: 4px; 
+	$border-weight: 2px; 
+	$box-shadow: 0 0 15px rgba(0,0,0,0.3);
 
 
 	//Note: Typography variables are set in /typography/_base.scss
