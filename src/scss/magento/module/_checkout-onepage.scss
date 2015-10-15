@@ -27,7 +27,41 @@
  * Checkout - One Page
  * ============================================ */
 
+.checkout-onepage-index .col-right,
+.checkout-onepage-index .col-left {
+    display: none;
+}
 
+.checkout-onepage-index .col-main {
+    width: auto;
+    float: none;
+}
+
+@include bp(min-width, $bp-large+1) {
+    .checkout-onepage-index {
+        .col-main {
+            float: left;
+            width: percentage(660px/960px);
+            padding-right: 20px;
+        }
+
+        .col-right,
+        .col-left {
+            width: percentage(300px/960px);
+            display: block;
+        }
+
+        .col-right {
+            padding-left: 0;
+        }
+    }
+}
+
+.opc {
+    select {
+        width: (230px + 135px);
+    }
+}
 
 /* -------------------------------------------- *
  * Section Styling - Default
@@ -35,7 +69,6 @@
 
 .opc .section .step-title {
     width: 100%;
-    border-top: 1px solid $c-divider-border;
     position: relative;
     @include not-selectable;
 
@@ -54,30 +87,20 @@
     display: none;
 }
 
+.opc .section.allow:not(.active) .step-title a {
+    display: block;
+    float: right;
+    line-height: 40px;
+    height: 40px;
+    padding: 0px 10px;
+}
+
 .no-touch .opc .section .step-title a:hover {
     text-decoration: none;
 }
 
-.opc .section .step-title h2 {
-    padding: $spacing 0;
-    @extend .h3; 
-    margin: 0; 
-}
-
-.opc .section .step {
-    padding: $spacing;
-
-    &:after {
-        @include clearfix;
-    }
-}
-
 .opc select {
     width: 100%;
-}
-
-.opc h3 {
-    font-weight: 500;
 }
 
 .opc .buttons-set {
@@ -97,6 +120,11 @@
     .back-link {
         float: right;
         margin: 0;
+    }
+    a {
+        line-height: 20px;
+        display: inline-block;
+        padding: 5px 5px 5px 0;
     }
 }
 
@@ -177,7 +205,6 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
 
     dt {
         margin: 13px 0 5px;
-        font-weight: bold;
 
         &:first-child {
             margin: 0 0 5px;
@@ -252,20 +279,17 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
 .block-progress {
     border: 0;
     margin: 0;
+    border-left: 1px solid $c-module-border;
+    padding-left: 20px;
 
     dt {
         padding-top: 6px;
+        @include h4;
         margin-bottom: 6px;
-        font-weight: normal;
-        color: $c-text-gray;
     }
 
-    dt.complete {
-        color: $c-h4;
-    }
     dd {
-        padding-left: 15px;
-        margin-bottom: 10px;
+        margin: 0px;
     }
 
     #payment-progress-opcheckout .subtitle {
@@ -273,6 +297,22 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
     }
 
     .payment-info {
+
+        dt {
+            padding: 0;
+            margin: 0 0 3px 0;
+            float: left;
+            clear: both;
+
+            &:after {
+                content: ': ';
+            }
+        }
+
+        dd {
+            float: left;
+            margin-bottom: 3px;
+        }
 
         &:after {
             @include clearfix;
@@ -397,10 +437,6 @@ body:not(.opc-has-progressed-from-login) .opc.opc-firststep-login .section#opc-l
     .item {
         @include clearfix;
         margin-top: $trim;
-
-        h5 {
-            font-weight: bold;
-        }
 
         .product-img-box {
             width: auto;

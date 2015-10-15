@@ -32,7 +32,6 @@
 }
 
 .categorylandingMainblock {
-    border: 1px solid #E2E2E2;
     padding: 7px;
 }
 
@@ -48,13 +47,9 @@
     width: 23% !important;
     margin-right: percentage(8/300) !important;
     margin-bottom: $box-spacing;
-    border: 1px solid $c-module-border;
     padding: 10px;
 }
 
-.catblocks li:hover {
-    border-color: $c-module-border-highlight;
-}
 
 @include bp(max-width, $bp-medium) {
     .catblocks li {
@@ -87,11 +82,6 @@
 .catblocks li a span {
     color: #FFFFFF;
     position: absolute;
-    background-color: #7B7C7B;
-    font-family: raleway;
-    font-size: 17px;
-    font-weight: bold;
-    text-transform: uppercase;
     text-align: center;
     bottom: 0px;
     left: 0px;
@@ -116,7 +106,6 @@
     display: block;
     margin: 0;
     position: absolute;
-    color: #000000;
     font-size: 30px;
     font-weight: 500;
     line-height: 36px;
@@ -124,7 +113,6 @@
 }
 
 .catalog-category-view div.categoryland-caption span.blue-big-text {
-    color: #3399CC;
     font-size: 50px;
     font-weight: 800;
     padding: 0 0 0 8px;
@@ -140,20 +128,14 @@
     height: 20px;
 }
 
-.catalog-category-view div.categoryland-caption p.desc {
-    font: italic 18px/28px Georgia, "Times New Roman", Times, serif;
-    color: #656565;
-}
 
 .cms-home #homepage-main-slides div.slides_control div div.slideshow-caption a.link:hover,
 .cms-home #homepage-main-slides div.slides_control div div.slideshow-caption span.link:hover {
     text-decoration: underline;
-    color: #1189C5;
 }
 
 .cms-home #homepage-main-slides div.slides_control div div.slideshow-caption span.blue-big-text,
 .catalog-category-view div.categoryland-caption span.blue-big-text {
-    color: #3399CC;
     font-size: 50px;
     font-weight: 800;
     padding: 0 0 0 8px;
@@ -170,8 +152,3 @@
     height: 20px;
 }
 
-.cms-home #homepage-main-slides div.slides_control div div.slideshow-caption p.desc,
-.catalog-category-view div.categoryland-caption p.desc {
-    font: italic 18px/28px Georgia, "Times New Roman", Times, serif;
-    color: #656565;
-}

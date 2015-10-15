@@ -33,62 +33,30 @@
     }
 
     &.clean-table {
-        font-family: $f-stack-special;
-        font-size: $f-size-xs;
-        text-transform: uppercase;
         width: 100%;
-
-        th {
-            border-bottom: 1px solid $c-table-border;
-        }
 
         td {
             padding: 15px;
             vertical-align: top;
         }
-
-        thead th {
-            font-family: $f-stack-special;
-        }
     }
 
     .product-name {
-        font-size: $f-size-xl;
-        font-family: $f-stack-special;
         margin-bottom: 0;
-        text-transform: uppercase;
-
-        a {
-            color: $c-link;
-        }
     }
 
     .wishlist-sku {
-        font-size: $f-size-xxs;
-        font-family: $f-stack-special;
         margin: 5px 0;
     }
 
     textarea {
-        border: 2px solid $colour-grey--lighter;
         width: 100%;
-        height: 80px;
-
-        &:focus {
-            background: $colour-white; 
-            border: 2px solid $colour-grey--lighter;
-        }
     }
 
     .item-manage {
         text-align: right;
         max-width: 450px;
         padding-top: 5px;
-
-        .button {
-	        @extend .button; 
-            @extend .button--pill; 
-        }
     }
 
     .cart-cell {
@@ -145,14 +113,6 @@
 
     }
 
-    .price-box {
-        font-family: $f-stack-special;
-        font-size: $f-size-xs;
-
-        .price {
-            color: $c-text;
-        }
-    }
 
     .giftregisty-add {
         margin-top: 5px;
@@ -163,7 +123,6 @@
 
         li {
             cursor: pointer;
-            color: $c-action;
             margin-bottom: 3px;
         }
     }
@@ -171,12 +130,7 @@
     .truncated {
         .details {
             background: none;
-            color: $c-action;
         }
-    }
-
-    td[data-rwd-label]:before {
-        font-weight: 600;
     }
 }
 
@@ -209,10 +163,6 @@
                 width: 110px;
             }
         }
-
-        .product-name {
-            font-size: $f-size-s;
-        }
     }
 }
 
@@ -222,10 +172,6 @@
     #wishlist-table {
         &:after {
             @include clearfix;
-        }
-
-        .product-name {
-            font-size: $f-size-xl;
         }
 
         textarea {
@@ -360,7 +306,6 @@
                 right: 0px;
                 display: block;
                 padding: 0px;
-                height: 20px;
             }
         }
 
@@ -392,18 +337,10 @@
         margin: 0;
     }
 
-    .price-box,
-    .price-box .price,
-    .link-cart {
-        font-size: $f-size-xs;
-    }
-
     .link-cart {
         float: left;
-        text-transform: uppercase;
         margin-right: 7px;
         padding-right: 7px;
-        border-right: 1px solid $c-module-border-light;
     }
 
 }

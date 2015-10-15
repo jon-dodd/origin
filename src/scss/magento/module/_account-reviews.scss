@@ -30,9 +30,6 @@
 .product-review {
     .product-img-box {
         p.label {
-            border-bottom: 1px solid $c-module-border;
-            font-size: $f-size-xl;
-            font-family: $f-stack-special;
             margin-top: 20px;
             padding-bottom: $gap;
             text-transform: uppercase;
@@ -45,17 +42,11 @@
 
     .product-details {
         h2 {
-            border-bottom: 1px solid $c-module-border;
-            color: #3399CC;
-            font-size: $f-size-xl;
-            font-weight: 600;
-            font-family: $f-stack-special;
             padding-bottom: $gap;
         }
     }
 
     .ratings-table {
-        font-family: $f-stack-special;
 
         th {
             padding-right: $gap;
@@ -63,27 +54,14 @@
 
         tr {
             float: left;
-            font-size: $f-size-xs;
             margin-right: $gap;
-            text-transform: uppercase;
         }
     }
 
     .ratings-description {
         dt {
-            border-bottom: 1px solid $c-module-border;
-            font-size: $f-size-xl;
-            font-weight: 400;
-            font-family: $f-stack-special;
             margin-top: 20px;
             padding: $gap 0;
-            text-transform: uppercase;
-        }
-
-        dd {
-            color: #737373;
-            font-family: $f-stack-special;
-            font-size: $f-size-s;
         }
     }
 }
