@@ -49,8 +49,7 @@
 .cart-forms .discount,
 .cart-forms .giftcard,
 .cart-forms .shipping {
-    padding: $spacing;
-    background-color: $colour-pointing;
+    padding: $box-spacing;
 }
 
 .cart-table,
@@ -136,7 +135,6 @@
 
 .cart .page-title {
     margin-bottom: 15px;
-    border-bottom: 1px solid $c-module-border-light;
 
     &:after {
         @include clearfix;
@@ -249,7 +247,6 @@
 }
 
 .cart-table {
-    font-family: $f-stack-special;
 
     th,
     td,
@@ -260,9 +257,6 @@
     }
 
     h2 {
-        color: $c-h2;
-        font-size: $f-size;
-        font-weight: 600;
         margin-bottom: 0;
     }
 
@@ -270,16 +264,11 @@
     tbody td {
         background-color: transparent;
         padding: 10px 5px;
-        font-family: $f-stack-special;
     }
 
     .product-cart-info,
     .product-cart-actions {
         padding-left: 15px;
-    }
-
-    tr {
-        border-bottom: 1px solid $c-table-border;
     }
 
     tfoot {
@@ -295,8 +284,6 @@
     span.or {
         font-size: 9px;
         padding: 0 5px;
-        text-transform: uppercase;
-        font-family: $f-stack-special;
     }
 
     .product-cart-image .cart-links,
@@ -320,12 +307,7 @@
     }
 
     .product-cart-sku {
-        font-size: $f-size-xs;
         margin: 5px 0 12px;
-
-        .label {
-            font-weight: 600;
-        }
     }
 
     .btn-empty {
@@ -340,29 +322,12 @@
     .cart-tax-total {
         position: relative;
         cursor: pointer;
-
-        &:after {
-            @include triangle(left, 6px, $c-text-primary);
-            position: absolute;
-            top: 3px;
-            right: -11px;
-        }
-
-        &.cart-tax-total-expanded {
-            &:after {
-                @include triangle(down, 6px, $c-text-primary);
-                right: -15px;
-                top: 6px;
-            }
-        }
     }
 
     .cart-links > li {
         white-space: nowrap;
-        line-height: 1.3;
         margin-bottom: 5px;
         min-width: 65px;
-        font-size: $f-size-s;
 
         > a {
             display: block;
@@ -378,8 +343,6 @@
         text-align: center;
 
         .qty {
-            height: 30px;
-            border-color: $c-input-border;
             border-radius: 0;
             margin-bottom: 10px;
             text-align: center;
@@ -398,10 +361,6 @@
 
 @include bp(max-width, $bp-medium) {
     .cart-table {
-
-        th {
-            font-size: $f-size-xs;
-        }
 
         th,
         td {
@@ -466,8 +425,6 @@
 
                 &:before {
                     content: attr(data-rwd-label) ":";
-                    font-size: $f-size-xs;
-                    font-family: $f-stack-special;
                     padding-right: 5px;
                     text-transform: uppercase;
                 }
@@ -476,10 +433,6 @@
             &.product-cart-price {
                 text-align: left;
             }
-        }
-
-        h2 {
-            padding-right: $spacing*3; 
         }
 
         .cart-links {
@@ -499,11 +452,6 @@
         .cart-tax-info {
             font-style: italic;
             padding-left: $trim-small;
-            font-size: $f-size-s;
-
-            .price {
-                font-size: $f-size-s;
-            }
         }
 
         .product-cart-image {
@@ -513,9 +461,7 @@
 
             a.cart-edit {
                 display: block;
-                font-size: $f-size-xl;
                 text-align: center;
-                text-transform: uppercase;
             }
         }
 
@@ -569,13 +515,6 @@
             }
         }
 
-        .price,
-        .product-cart-price:before {
-            font-weight: 500;
-            font-size: $f-size-l;
-            font-family: $f-stack-sans;
-        }
-
         .cart-footer-actions {
             text-align: center;
             width: 100%;
@@ -615,9 +554,8 @@
 
 .shipping {
 
-    select {
-        max-width: 100%;
-        display: block;
+    h2 {
+        margin: 0 0 5px;
     }
 
     select.validation-failed {
@@ -648,12 +586,16 @@
         }
 
         .shipping-region {
-            width: 33%;
+            width: 41%;
         }
 
         .shipping-postcode {
             margin-right: 0;
-            width: 26%; 
+            width: 18%;
+
+            input {
+                margin-top: 4px;
+            }
         }
 
         .input-box {
@@ -661,7 +603,11 @@
         }
 
         input {
-            height: 30px;
+            margin-top: 4px;
+        }
+
+        label {
+            white-space: nowrap;
         }
     }
 
@@ -674,13 +620,16 @@
         }
 
         label {
-
-            span {
-                font-family: $f-stack-special;
-                font-weight: bold;
-                font-style: normal;
-            }
+            min-width: 100px;
         }
+    }
+
+    #co-shipping-method-form .buttons-set .button {
+        float: left;
+        margin-left: 0;
+    }
+    #co-shipping-method-form .sp-methods dd label {
+        min-width: 220px;
     }
 }
 
@@ -713,8 +662,6 @@
     }
 
     table {
-        font-family: $f-stack-special;
-        font-size: $f-size-xs;
         margin-bottom: 20px;
         width: 100%;
 
@@ -732,20 +679,11 @@
         }
 
         tfoot {
+
             td {
                 font-size: 24px;
                 padding: 2px 5px;
                 vertical-align: top;
-            }
-
-            strong span,
-            span.price {
-                font-family: $f-stack-sans;
-
-            }
-
-            strong {
-                font-weight: 400;
             }
         }
     }
@@ -758,12 +696,6 @@
     }
 }
 
-@include bp(max-width, $bp-medium) {
-
-    .cart .cart-totals table tfoot td {
-        font-size: $f-size-xxl;
-    }
-}
 
 // =============================================
 // Discount codes and gift cards
@@ -780,6 +712,14 @@
 
     h2 {
         display: none;
+    }
+
+    label {
+        font-weight: 400;
+        text-align: left;
+        min-width: 105px;
+        display: inline-block;
+        margin-right: 10px;
     }
 
     .field-wrapper {
@@ -801,8 +741,7 @@
 
     .input-text {
         border-radius: 0;
-        height: 30px;
-        max-width: 190px;
+        margin: 4px 10px 0 0;
     }
 }
 
@@ -813,11 +752,6 @@
 .cart .giftcard .check-gc-status {
     float: left;
     padding: 0px;
-
-    > span > span {
-        font-size: $f-size;
-        text-transform: none;
-    }
 }
 
 /* ============================================ *
@@ -825,9 +759,6 @@
  * ============================================ */
 
 .crosssell {
-    h2 {
-        color: $c-blue;
-    }
 
     .item a.product-image {
         width: auto;

@@ -37,15 +37,8 @@ body[class*="checkout-multishipping-"] {
             width: 20%;
             text-align: center;
             padding: 8px 1% 6px;
-            background: $c-module-background;
-            text-transform: uppercase;
-            border-bottom: 1px solid $c-module-border;
-            border-right: 1px solid $c-module-border;
             margin-bottom: 10px;
-            font-family: $f-stack-special;
-            &.active {
-                background-color: $c-button-secondary;
-            }
+
             &.last {
                 border-right: 0px;
             }
@@ -86,8 +79,6 @@ body[class*="checkout-multishipping-"] {
 
     .grand-total {
         text-align: right;
-        font-size: $f-size-xl;
-        font-weight: bold;
     }
 
     #checkout-review-submit {
@@ -137,19 +128,13 @@ body[class*="checkout-multishipping-"] {
             h2, h3, h4 {
                 font-weight: normal;
                 width: 100%;
-                background: $c-module-background;
-                border-bottom: 1px solid $c-module-border;
                 padding: 10px;
-                font-size: 14px;
             }
         }
         > h4 {
             font-weight: normal;
             width: 100%;
-            background: $c-module-background;
-            border-bottom: 1px solid $c-module-border;
             padding: 10px;
-            font-size: 14px;
         }
         .box-content {
             margin-bottom: 25px;
