@@ -32,8 +32,6 @@
     float: none;
 
     .review-heading {
-        border-top: 1px solid $c-module-border;
-        border-bottom: 1px solid $c-module-border;
         padding: $gap 0 5px;
 
         &:after {
@@ -53,12 +51,6 @@
             .count-container {
                 .limiter {
                     margin-bottom: 0;
-
-                    label {
-                        font-family: $f-stack-special;
-                        font-size: 10px;
-                        text-transform: uppercase;
-                    }
                 }
             }
 
@@ -68,38 +60,11 @@
         }
     }
 
-    h2 {
-        color: $c-blue;
-        font-size: $f-size-xs;
-        text-transform: uppercase;
-
-        span {
-            color: $c-text;
-        }
-    }
-
-    h3 {
-        font-family: $f-stack-special;
-        font-size: $f-size-xs;
-        font-weight: normal;
-        text-transform: uppercase;
-
-        span {
-            color: $c-blue;
-        }
-    }
-
     .fieldset {
         padding-top: 25px;
-        width: 470px;
 
         h4 {
-            border-bottom: 1px solid $c-module-border;
-            font-family: $f-stack-special;
-            font-size: $f-size-xs;
-            font-weight: normal;
             padding-bottom: 5px;
-            text-transform: uppercase;
 
             em {
                 display: none;
@@ -107,12 +72,7 @@
         }
 
         .form-list {
-            font-family: $f-stack-special;
-            font-size: $f-size-xs;
-            font-weight: normal;
             margin: $gap 0;
-            text-transform: uppercase;
-            width: 470px;
 
             .inline-label {
                 label {
@@ -127,20 +87,15 @@
             }
 
             label {
-                font-size: $f-size-xs;
                 font-weight: normal;
             }
 
             textarea {
-                border: 1px solid $c-module-border;
-                border-radius: 0;
                 min-width: 100%;
                 -webkit-appearance: none;
             }
 
             input {
-                border: 1px solid $c-module-border;
-                border-radius: 0;
 
                 &[type="text"] {
                     width: 100%;
@@ -156,24 +111,16 @@
     }
 
     dl {
-        font-family: $f-stack-special;
-        font-size: $f-size-xs;
-        font-weight: normal;
         margin-bottom: $gap;
 
         dt {
             margin: $gap 0;
-            text-transform: uppercase;
         }
 
         dd {
-            font-family: $f-stack-serif;
-            font-size: $f-size;
             margin: $gap 0;
 
             .ratings-table {
-                font-family: $f-stack-special;
-                font-size: $f-size-xs;
                 width: 100%;
 
                 tr {
@@ -189,20 +136,11 @@
             table {
                 margin: 15px 0;
             }
-
-            .review-meta {
-                color: $c-blue;
-                font-family: $f-stack-special;
-                font-size: 10px;
-                font-weight: normal;
-                text-transform: uppercase;
-            }
         }
     }
 }
 
 .review-summary-table {
-    border-bottom: 1px solid $c-module-border;
     margin: 0 0 $gap;
 
     thead {
@@ -216,10 +154,6 @@
     }
 
     tbody {
-        th {
-            background: #FFFFFF;
-            font-size: $f-size-xs;
-        }
         td {
             border: none;
             text-align: center;
@@ -258,9 +192,6 @@
  * ============================================ */
 
 .ratings-table {
-    font-family: $f-stack-special;
-    font-size: $f-size-xs;
-    text-transform: uppercase;
 
     th {
         padding-right: 10px;

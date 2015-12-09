@@ -32,14 +32,13 @@
     display: block;
     width: 100%;
     margin: $gap 0;
-    border: 1px solid $c-module-border-light;
 
     .slideshow {
         width: 100%;
         padding: 0;
         position: relative;
         margin: 0;
-        border: 10px solid #FFFFFF;
+
         & > li {
             position: absolute;
             top: 0;
@@ -74,11 +73,9 @@
     @include not-selectable;
 
     span {
-        font-family: arial;
         width: 44px;
         height: 44px;
         display: inline-block;
-        color: #DDDDDD;
         cursor: pointer;
         $pager-size: 16px;
 

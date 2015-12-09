@@ -110,7 +110,7 @@ $c-text-primary: $c-blue;
 
 // Interaction
 
-$c-action: $colour-ginger;
+$c-action: $c-blue;
 $c-stimulus: darken($c-blue, 15%);
 $c-subtle: #A0A0A0;
 
@@ -170,32 +170,32 @@ $c-h5: $c-text;
 $c-h6: $c-text;
 
 // Link
-$c-link: $colour-link;
-$c-link-hover: darken($colour-link, 5%);
-$c-link-focus: $colour-link;
-$c-link-active: darken($colour-link, (5% / 2));
+$c-link: $c-action;
+$c-link-hover: darken($c-action, 5%);
+$c-link-focus: $c-action;
+$c-link-active: darken($c-action, (5% / 2));
 
 // Module (generic)
 
-$c-module-background: $colour-eggshell;
+$c-module-background: #F4F4F4;
 $c-module-background-hover: shade($c-module-background, 3%);
-$c-module-background-secondary: $colour-eggshell;
-$c-module-background-dark: $colour-black;
+$c-module-background-secondary: #EAF8FF;
+$c-module-background-dark: #AAAAAA;
 // This should be applied whenever the border is surrounding a white element and/or is directly showing on white.
-$c-module-border: $colour-grey--lighter;
+$c-module-border: #CCCCCC;
 // This should be applied whenever the border is wrapping an element with $c-module-background
-$c-module-border-light:  $colour-grey--lighter;
-$c-module-border-dark:  $colour-grey--lighter;
-$c-module-border-highlight: $colour-ginger;
+$c-module-border-light: #EDEDED;
+$c-module-border-dark: #777777;
+$c-module-border-highlight: $c-blue;
 
 
 // Table
 
-$c-table-background: $colour-white;
-$c-table-border: $colour-grey--lighter;
+$c-table-background: #F4F4F4;
+$c-table-border: #C0C0C0;
 
-$c-table-zebra-odd: $colour-white;
-$c-table-zebra-even: $colour-grey--lighter;
+$c-table-zebra-odd: #F8F7F5;
+$c-table-zebra-even: #EEEDED;
 
 // Tabs
 
@@ -218,23 +218,23 @@ $c-email-highlighted-border: #FFF74C;
 
 // Font Stacks
 
-$f-stack-sans: $font-primary;
-$f-stack-serif: $font-condensed; 
-$f-stack-special: $font-special; 
+$f-stack-sans: 'Helvetica Neue', Verdana, Arial, sans-serif;
+$f-stack-serif: Georgia, Times, 'Times New Roman', serif;
+$f-stack-special: 'Raleway', 'Helvetica Neue', Verdana, Arial, sans-serif;
 
 $f-stack-default: $f-stack-sans;
 
 // Font Sizes
 
-$f-size-xxl: $size-extra;
-$f-size-xl: $size-largest;
-$f-size-l: $size-larger;
+$f-size-xxl: 18px;
+$f-size-xl: 16px;
+$f-size-l: 15px;
 
-$f-size: $size-base;
+$f-size: 14px;
 
-$f-size-s: $size-smaller;
-$f-size-xs: $size-smaller;
-$f-size-xxs:$size-smaller;
+$f-size-s: 13px;
+$f-size-xs: 12px;
+$f-size-xxs: 11px;
 
 // Base Measures
 

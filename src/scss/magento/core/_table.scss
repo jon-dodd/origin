@@ -41,25 +41,12 @@
 
 .data-table td,
 .data-table th {
-    padding: $spacing;
+    padding: 10px;
     vertical-align: top;
 }
 
 .data-table th {
-    background: $c-table-background;
-    text-transform: uppercase;
-    font-family: $f-stack-special;
-    line-height: 1.4;
     white-space: nowrap;
-}
-
-.data-table thead th,
-.data-table tbody td {
-    border-bottom: 1px solid $c-table-border;
-}
-
-.data-table tfoot tr {
-    background: $c-table-background;
 }
 
 .data-table tbody td .item-options {
@@ -76,14 +63,8 @@
  * ============================================ */
 
 .info-box {
-    border: 1px solid $c-table-border;
     padding: 12px 15px;
     margin: 0 0 15px;
-
-    h2 {
-        font-weight: bold;
-        font-size: 13px;
-    }
 }
 
 .info-table th,
@@ -100,31 +81,7 @@
     padding: 4px 0;
 }
 
-/* ============================================ *
- * Zebra-Stripe Table
- * ============================================ */
 
-.zebra-table {
-    tr:first-child,
-    th:first-child {
-        border-top: 1px solid $c-table-border;
-    }
-
-    td,
-    th {
-        border-bottom: 1px solid $c-table-border;
-        padding: 6px;
-        background-color: transparent;
-    }
-
-    tr {
-        background-color: $c-table-zebra-even;
-    }
-
-    tr:nth-child(odd) {
-        background-color: $c-table-zebra-odd;
-    }
-}
 
 /* ============================================ *
  * Linearize Table
@@ -153,7 +110,6 @@
 
     tbody tr {
         position: relative;
-        border-bottom: 1px solid $c-module-border;
     }
 
     tbody td {
@@ -182,10 +138,7 @@
 
     tbody td[data-rwd-label]:before {
         content: attr(data-rwd-label) ":";
-        font-size: $f-size-xs;
-        font-family: $f-stack-special;
         padding-right: 5px;
-        text-transform: uppercase;
     }
 
     tfoot tr {

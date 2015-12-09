@@ -55,7 +55,6 @@
 
     .product-shop .product-name .h1,
     .product-img-box .product-name h1 {
-        color: $c-action;
         margin-bottom: 10px;
         border: 0;
     }
@@ -101,10 +100,6 @@
             margin-bottom: 8px;
         }
 
-        .availability {
-            font-size: $f-size-xl;
-        }
-
         .price-box {
             margin-top: 0;
 
@@ -115,43 +110,9 @@
                 line-height: 1.2;
             }
 
-            .regular-price .price,
-            .special-price .price,
-            .full-product-price .price {
-                color: $c-action;
-                font-size: 24px;
-            }
-
-            .special-price {
-
-                .price-label {
-                    font-size: $f-size-xl;
-                    text-transform: uppercase;
-                }
-
-                span.weee {
-                    color: $c-text;
-
-                    span.price {
-                        font-size: $f-size-xl;
-                    }
-                }
-            }
-
             .price-excluding-tax,
             .price-including-tax {
                 display: block;
-                line-height: 1.2;
-                color: $c-text;
-
-                .label {
-                    font-size: $f-size-xl;
-                    font-weight: 300;
-                }
-
-                .price {
-                    font-size: 20px;
-                }
             }
 
         }
@@ -176,46 +137,12 @@
 
 }
 
-@include bp(max-width, 850px) {
-    .product-view {
-        .product-shop {
-            .price-box {
-                .price-excluding-tax,
-                .price-including-tax {
-                    .label {
-                        font-size: $f-size-l;
-                    }
-
-                    .price {
-                        font-size: $f-size-xxl;
-                    }
-                }
-            }
-        }
-    }
-}
-
 @include bp(max-width, $bp-medium) {
     .product-view {
         .add-to-cart-wrapper {
             float: none;
             width: 100%;
             clear: both;
-        }
-
-        .product-shop {
-            .price-box {
-                .price-excluding-tax,
-                .price-including-tax {
-                    .label {
-                        font-size: $f-size-xl;
-                    }
-
-                    .price {
-                        font-size: 20px;
-                    }
-                }
-            }
         }
     }
 }
@@ -301,11 +228,6 @@
     }
 }
 
-.no-touch .product-image-thumbs {
-    a:hover {
-        border-color: darken($c-module-border-light, 15%);
-    }
-}
 
 .product-view .product-shop,
 .product-view .add-to-cart-wrapper,
@@ -333,9 +255,7 @@
     }
 
     .add-to-cart {
-        padding-bottom: 3px;
         margin-bottom: 10px;
-        border-bottom: 1px solid $c-module-border;
     }
 
     /* Set a min-height so that the floated elements break appropriately */
@@ -403,7 +323,15 @@
         }
     }
 
-
+    .add-to-cart-buttons .button {
+        min-height: 40px;
+        line-height: 40px;
+        padding: 0px 30px;
+        float: left;
+        min-width: 160px;
+        width: 100%;
+        white-space: normal;
+    }
 
     .alert-price,
     .alert-stock {
@@ -617,10 +545,6 @@
 }
 
 .grouped-items-table {
-    .name-wrapper {
-        color: $c-text-primary;
-        font-family: $f-stack-special;
-    }
 
     .qty-wrapper {
         padding-top: $element-spacing;
@@ -767,13 +691,10 @@
 
 .product-options p.note {
     margin: 0;
-    font-size: $f-size-xxs;
 }
 
 .product-options-bottom {
-    background-color: $c-module-background;
     padding: 15px 20px;
-    border: 1px solid $c-fieldset-border;
     border-top: 0;
     margin-bottom: $box-spacing;
 }
@@ -789,7 +710,6 @@
     padding: 0 0 $gap;
     border: 0;
     background: 0;
-    color: $c-text;
 
     @include bp(max-width, $bp-xlarge) {
         float: none;
@@ -806,10 +726,6 @@
     padding: 2px 0;
 }
 
-.product-options-bottom .tier-prices .price,
-.product-options-bottom .tier-prices .benefit {
-    color: $c-text;
-}
 
 /* "display: none" should be removed if products on site have a long list of product options and those product options */
 /*  affect the price so that the customer can see the updated price close to the "Add to Cart" button */
@@ -887,7 +803,6 @@
 
             &:first-child {
                 margin-left: 0;
-                font-size: $f-size-xl;
                 padding-right: 5px;
                 padding-left: 5px;
             }

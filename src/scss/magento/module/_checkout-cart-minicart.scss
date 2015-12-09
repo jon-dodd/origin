@@ -54,24 +54,16 @@
         display: none;
     }
     .block-subtitle {
-        color: #50A4CF;
-        font-family: $f-stack-special;
-        font-size: 10px;
-        font-weight: bold;
-        line-height: 1.4;
         padding: 5px;
         text-align: center;
-        text-transform: uppercase;
         margin-bottom: 0px;
 
         .close {
             width: 40px;
             float: right;
             display: block;
-            color: $c-text;
             text-decoration: none;
             font-weight: normal;
-            font-size: 30px;
             position: absolute;
             top: -8px;
             right: $box-spacing - 13px;
@@ -83,7 +75,6 @@
 
         li {
             padding: 8px 5px 8px 11px;
-            border-bottom: 1px solid #DDDDDD;
             position: relative;
 
             &.last {
@@ -100,10 +91,6 @@
         .product-name {
             padding-top: 0px;
             font-weight: bold;
-
-            a {
-                color: $c-action;
-            }
         }
     }
 
@@ -111,11 +98,9 @@
         margin-bottom: 0.5em;
 
         th {
-            text-transform: uppercase;
             padding-right: $gap;
         }
         td {
-            color: $c-text-primary;
             clear: right;
         }
 
@@ -138,9 +123,6 @@
         .quantity-button {
             opacity: 0;
 
-            @include transition-property(opacity);
-            @include transition-duration(100ms);
-
             &[disabled] {
                 cursor: default;
             }
@@ -152,16 +134,11 @@
     }
 
     .subtotal {
-        background-color: #DDDDDD;
         text-align: center;
-        line-height: 2em;
 
         .label {
             color: white;
             text-transform: uppercase;
-        }
-        .price {
-            color: $c-text-primary;
         }
     }
 
@@ -179,8 +156,6 @@
         .cart-link {
             height: 33px;
             line-height: 39px;
-            text-transform: uppercase;
-            font-size: $f-size-s;
         }
 
         .paypal-logo {
@@ -229,16 +204,6 @@
 
 @include bp(max-width, $bp-medium) {
     .header-minicart {
-        .subtotal {
-            .label {
-                color: $c-text;
-            }
-        }
-        .minicart-wrapper {
-            &:before {
-                background-color: #EDEDED;
-            }
-        }
 
         .quantity-button {
             float: none;
